@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Chrome AirPods Button Extension Options</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .option-group {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+    }
+    .option-group h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #24292f;
+    }
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .checkbox-container input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .description {
+      font-size: 14px;
+      color: #656d76;
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+    .save-button {
+      background-color: #2da44e;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .save-button:hover {
+      background-color: #2c974b;
+    }
+    .status {
+      margin-top: 10px;
+      padding: 8px;
+      border-radius: 6px;
+      display: none;
+    }
+    .status.success {
+      background-color: #d1f7d1;
+      color: #0969da;
+      border: 1px solid #a2ea83;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chrome AirPods Button Extension Options</h1>
+  
+  <div class="option-group">
+    <h3>Media Session Control</h3>
+    <div class="checkbox-container">
+      <input type="checkbox" id="mediaSessionCapture" />
+      <label for="mediaSessionCapture">Enable media session capture</label>
+    </div>
+    <div class="description">
+      When enabled, the extension will claim the media session to handle play/pause from AirPods and other Bluetooth devices.
+    </div>
+  </div>
+
+  <div class="option-group">
+    <h3>Debug Logging</h3>
+    <div class="checkbox-container">
+      <input type="checkbox" id="debugLogging" />
+      <label for="debugLogging">Enable debug logging</label>
+    </div>
+    <div class="description">
+      When enabled, the extension will output debug information to the console for troubleshooting purposes.
+    </div>
+  </div>
+
+  <button class="save-button" id="saveOptions">Save Options</button>
+  <div class="status" id="status"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>
