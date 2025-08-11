@@ -1,6 +1,6 @@
 {
   "name": "AirPods Meet Mute Toggle",
-  "description": "Toggle Google Meet mute/unmute via AirPods Play/Pause or a shortcut.",
+  "description": "Toggle Google Meet mute/unmute via AirPods Play/Pause or keyboard shortcut.",
   "version": "1.0.0",
   "manifest_version": 3,
   "permissions": [
@@ -35,6 +35,7 @@
       "description": "Trigger from media play/pause"
     }
   },
+  "options_page": "options.html",
   "action": {
     "default_title": "AirPods Meet Mute Toggle",
     "default_popup": "popup.html"
